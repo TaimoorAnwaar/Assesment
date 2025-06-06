@@ -16,7 +16,7 @@ class InventorySeeder extends Seeder
             Inventory::create([
                 'product_id' => $product->id,
                 'quantity' => rand(10, 50),
-                'location' => 'Main Warehouse',
+                'location' => 'Lahore warehouse',
                 'cost' => rand(1000, 5000),
                 'lot_number' => 'LOT-' . strtoupper(uniqid()),
             ]);

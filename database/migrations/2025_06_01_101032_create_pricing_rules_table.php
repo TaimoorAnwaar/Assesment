@@ -14,8 +14,8 @@ class CreatePricingRulesTable extends Migration
             $table->id();
             $table->foreignId('product_id')->constrained()->onDelete('cascade');
             $table->enum('type', ['time', 'quantity']);
-            $table->string('condition'); // example: '>=10' or 'Saturday'
-            $table->decimal('discount', 5, 2)->default(0); // in percentage
+            $table->string('condition');
+            $table->decimal('discount', 5, 2)->default(0); 
             $table->timestamp('valid_from')->nullable();
             $table->timestamp('valid_to')->nullable();
             $table->integer('precedence')->default(0);
